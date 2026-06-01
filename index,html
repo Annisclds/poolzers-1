@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduInclusiva - Plataforma de Matemática Adaptativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-font-decrease" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-font-increase" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-contrast" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">Edu<span>Inclusiva</span></div>
+            <nav class="main-nav">
+                <a href="#funcionalidades">Como Funciona</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#perguntas">Dúvidas</a>
+                <a href="#login-cadastro" class="btn-primary">Acessar Plataforma</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Matemática para todos, adaptada para <span>cada mente</span>.</h1>
+                    <p>Uma plataforma educacional com design limpo, direto e totalmente personalizável. Criada para incluir alunos neurodivergentes, educação especial e todos que buscam um aprendizado sem barreiras.</p>
+                    <div class="hero-buttons">
+                        <a href="#login-cadastro" class="btn-primary btn-large">Começar Agora</a>
+                        <a href="#funcionalidades" class="btn-secondary btn-large">Conhecer Recursos</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="interactive-preview">
+                        <div class="preview-header">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                        <div class="preview-body">
+                            <p class="preview-tag">Ambiente do Aluno</p>
+                            <h3>Desafio do Dia: Frações</h3>
+                            <div class="preview-card">
+                                <p>Ajuste visual ativo para melhor foco.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="login-cadastro" class="interactive-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experimente a Adaptação em Tempo Real</h2>
+                    <p>Faça uma simulação de cadastro abaixo para ver como a interface se transforma instantaneamente para atender às necessidades do estudante.</p>
+                </div>
+
+                <div class="simulation-grid">
+                    <div class="form-wrapper">
+                        <h3>Painel de Acesso</h3>
+                        <form id="adaptive-form" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <label for="student-name">Nome do Aluno ou Professor</label>
+                                <input type="text" id="student-name" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-type">Tipo de Perfil</label>
+                                <select id="profile-type" required>
+                                    <option value="aluno">Aluno</option>
+                                    <option value="professor">Professor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="neuro-type">Selecione a configuração de acessibilidade ou neurodivergência:</label>
+                                <select id="neuro-type">
+                                    <option value="padrao">Padrão (Sem ajustes específicos)</option>
+                                    <option value="tdah">TDAH (Interface minimalista, alto contraste de foco)</option>
+                                    <option value="dislexia">Dislexia (Fonte com maior espaçamento e fundo suave)</option>
+                                    <option value="tea">Autismo/TEA (Baixo estímulo visual, sem animações)</option>
+                                </select>
+                            </div>
+                            <button type="button" id="btn-simulate" class="btn-primary btn-full">Salvar e Adaptar Plataforma</button>
+                        </form>
+                    </div>
+
+                    <div class="view-wrapper" id="platform-preview">
+                        <div class="preview-status" id="preview-status-text">Visualização: Interface Padrão</div>
+                        <div class="adaptive-workspace" id="workspace">
+                            <h4>Espaço de Aprendizado: Matemática</h4>
+                            <p class="workspace-desc">Os professores podem criar ou recomendar tarefas nesta área. Abaixo está um exemplo prático de atividade recomendada.</p>
+                            
+                            <div class="exercise-card">
+                                <h5>Exercício 1: Somando as Partes</h5>
+                                <p class="exercise-text">Se você tem 2 pedaços de uma pizza que foi dividida em 4 partes iguais, qual fração da pizza você tem?</p>
+                                <div class="exercise-options">
+                                    <button class="option-btn">A) 1/4</button>
+                                    <button class="option-btn">B) 2/4</button>
+                                    <button class="option-btn">C) 3/4</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="funcionalidades" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recursos Desenvolvidos para Inclusão</h2>
+                    <p>Unimos engenharia de software e design especializado para que nenhum estudante fique para trás.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Perfil Customizável</h3>
+                        <p>O aluno especifica sua neurodivergência no cadastro e todo o layout se reajusta para mitigar barreiras cognitivas e visuais.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Recomendação Docente</h3>
+                        <p>Professores criam, gerenciam e recomendam tarefas de matemática direcionadas para as necessidades específicas de cada estudante.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Foco na Matemática</h3>
+                        <p>Conteúdo focado e direto na matéria de matemática inicial, evitando sobrecarga de informações e excesso de abas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="carousel-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Quem usa e confia</h2>
+                    <p>Histórias reais de professores e alunos que transformaram o aprendizado da matemática.</p>
+                </div>
+                <div class="carousel-container">
+                    <div id="carousel-track" class="carousel-track">
+                        </div>
+                    <div class="carousel-controls">
+                        <button id="carousel-prev" aria-label="Depoimento anterior">❮</button>
+                        <button id="carousel-next" aria-label="Próximo depoimento">❯</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="perguntas" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Tire suas dúvidas sobre o funcionamento e a arquitetura inclusiva da plataforma.</p>
+                </div>
+                <div id="faq-accordion" class="faq-accordion">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 EduInclusiva. Todos os direitos reservados. Design Clean & Bold focado em conversão e acessibilidade.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
